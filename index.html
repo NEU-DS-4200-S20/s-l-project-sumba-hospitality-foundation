@@ -4,13 +4,13 @@
 <!-- Metadata -->
 <head>
   <meta charset="utf-8">
-  
+
   <!-- Title -->
-  <title>Project Team # Sumba Hospitality Foundation: Topic, DS 4200 S20</title>
-  
+  <title>Project Team 5 Sumba Hospitality Foundation: DS 4200 S20</title>
+
   <!-- CSS Styling -->
   <!-- <link rel="stylesheet" href="style.css"> -->
- 
+
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
@@ -27,37 +27,35 @@
 
   <!-- Update this with your GitHub repo URL -->
   <span id="forkongithub"><a href="https://github.com/Northeastern-DS-4200-S20-Staff/S-L-Project-Template">Fork me on GitHub</a></span>
-  
+
   <!-- Your writeup goes here -->
   <div class = "content-column">
-  
-    <h1>Project Team #: Topic, DS 4200 S20</h1>
-    
-    <p><strong>Student One</strong>, <strong>Student Two</strong>, <strong>Student Three</strong></p>
-    
-    <p>Service-Learning Course Project as part of <a href="https://canvas.instructure.com/courses/1781714">DS 4200: Information Presentation and Visualization</a>, taught by <a href="https://www.eecs.tufts.edu/~dcashm01/">Prof. Dylan Cashman</a>, <a href="https://visualization.khoury.northeastern.edu/">Data Visualization @ Khoury</a>, <a href="https://www.khoury.northeastern.edu/">Northeastern University</a>.</p>
-    
-    
-    <h1>Motivation</h1>
-    
-    <p><em>Summary of user needs and motivating questions.</em></p>
-    
-    <p><em>Expectation: There is a clear focus, and a developed explanation of the problem, and a reasonable response is proposed.</em></p>
 
-    
+    <h1>Project Team 5: Sumba Hospitality Foundation DS 4200 S20</h1>
+
+    <p><strong>Itamar Zik</strong>, <strong>Luke Janik</strong>, <strong>Sang Min Joung</strong>, <strong>Orson Spence</strong></p>
+
+    <p>Service-Learning Course Project as part of <a href="https://canvas.instructure.com/courses/1781714">DS 4200: Information Presentation and Visualization</a>, taught by <a href="https://www.eecs.tufts.edu/~dcashm01/">Prof. Dylan Cashman</a>, <a href="https://visualization.khoury.northeastern.edu/">Data Visualization @ Khoury</a>, <a href="https://www.khoury.northeastern.edu/">Northeastern University</a>.</p>
+
+
+    <h1>Motivation</h1>
+
+    <p>The purpose of our design is to tell the story of Sumba Hospitality Foundation (SHF). We chose to take a visual storytelling approach which focuses on the geographic significance of the Island of Sumba. As a short background, SHF is an eco-hotel that attracts visitors from around the world, but is also a school that teaches local islanders hospitality and agricultural techniques and helps them find jobs after graduation. SHF expressed that it can be difficult to describe their model to potential guests and investors, and wanted us to try to tackle the problem using interactive visualizations. Because there are a series of steps in Sumba’s process, we felt that the most effective way to describe it to a user is through a collection of visualizations that are ordered “chronologically” and offer transitions between each visualization.</p>
+
+
     <h1>Visualization</h1>
-    
+
     <p><em>Include the interactive visualization as part of this page. Static example follows.</em></p>
-    
+
   </div>
-  
+
   <!-- Your visualization here -->
   <div class="vis-holder">
 
     <div id="bar-container"></div>
     <div id="tree-container"></div>
 
-    <!-- Change viewbox to whatever you want, e.g. "0 0 1000 6000" This determines your aspect ratio and coordinate system -->    
+    <!-- Change viewbox to whatever you want, e.g. "0 0 1000 6000" This determines your aspect ratio and coordinate system -->
     <!-- Delete all the sample SVG code below after the viewbox to before the closing tag. Populate this part of the SVG with D3. -->
     <!-- <div id="info">
       <div id="info-location">INDONESIA</div>
@@ -67,21 +65,21 @@
     <script src="js/process_data.js"></script>
     <script src="js/visualization.js"></script>
     <script src="js/itamar-vis.js"></script>
-    
-    
+
+
     <!-- <svg id="vis-svg"
       preserveAspectRatio="xMidYMid meet" class="marks" viewBox="0 0 821 520" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    
+
     </svg> -->
   </div>
-  
+
   <!-- Your writeup goes here -->
   <div class = "content-column">
 
     <h1>Demo Video</h1>
-    
+
     <p><em>Embedded MP4 demo video using the HTML5 &lt;video&gt; tag. For example, this screen recording Prof. Cody Dunne made of Mike Bostock's flexible transitions in D3 slide:</em></p>
-    
+
     <video controls width="100%">
       <source src="http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4" type="video/mp4">
       <p>Your browser doesn't support HTML5 video. Here is
@@ -89,53 +87,54 @@
     </video>
 
     <h1>Visualization explanation</h1>
-    
+
     <p><em>Final visualization screenshots (PNG images), design justifications, UI walk-through, and linked presentation slides.</em></p>
 
     <h1>Data Analysis</h1>
-    <p><em>Summary of data, data types, and data preprocessing.</em></p>
+    <p>Most of our data is categorical, but we do have some quantitative attributes like income and family size. Our main goal with this particular dataset is twofold. First, we want to use the categorical data about family size and parents occupation to understand the demographics of SHF’s student body. Second, we want to use the information about current income and the amount of money that students return to their families to demonstrate the impact that SHF has had on the lives of its students and their families. The data was collected by survey, which was sent to all the existing alumni of SHF. Below are some of the questions we asked, and how we processed this data:
+      <p>- Do you help parents earn money or work to support them?</p>
+      <p><em>  categorical data to determine which alumni we can include in our (Where does the money go?) visualization</em></p>
+      <p>- Are you currently working full time?</p>
+      <p><em>  categorical data to include in our interactive visualization, to show the network of Sumba alumni around the world</em></p>
+      <p>- What is your current income?</p>
+      <p><em>  categorical data to include in our interactive visualization, using a gradient to show income levels for alumni</em></p>
+      <p>- How many family members do you support with that money? For what purpose do they spend the money from you?</p>
+      <p><em>quantitative data to determine the categories for our (Where does the money go?) visualization</em></p>
 
-    <p><em>Expectation: Data sources match the problem statement and are appropriate. These descriptions should be very explicit so someone could read your page and properly reproduce your results.</em></p>
+
+    <p>Some of our other data had already existed in a guest survey done by the organization. This survey outlined where all guests were coming from, and is what is mapped above:</p>
+
+    </p>
 
     <h1>Task Analysis</h1>
 
-    <p><em>Summary of task table.</em></p>
-
-    <p><em>Expectation: Clearly describes domain tasks, processes, goals and abstract tasks for domain problems.</em></p>
+    <p>Because the goal of our project was to describe the model of SHF, we had a wide variety of tasks. The first aspect of the foundation that we wanted to capture in our project was the perspective of the guests. We wanted to be able to identify the nationality of each guest to give an idea of where the guests at SHF were from, and describe how they rated their stay at the resort. This data would be presented in a way that would allow the user to browse positive reviews and the variety of countries that guests come from. Next, we wanted to provide more information about the school and the island of Sumba to contextualize the impact that SHF has on its students’ lives. Here we would give the user an opportunity to explore the data about SHF and learn about its student body and sustainability. To complete the impact map, we wanted to show how SHF alumni increase their income by working at luxe resorts in Southeast Asia, and how they can use their increased salaries to support family back home. This would also be accomplished by allowing the user to explore data about where the students work post-graduation as well as how much money they send home.</p>
 
     <h1>Design Process</h1>
-    
-    <p><em>Sketches and design choices to justify final visualization.</em></p>
-
-    <p><em>Expectation: Evidence of iterative improvement.
-    Logical discussion of design choices grounded in theory from course.
-    Discusses feedback from usability testing.</em></p>
-
+    <iframe width=800 height=700 src="https://docs.google.com/document/d/e/2PACX-1vRD8Ua6QdbvceU0Gvbjq9eoxSiRh5dc-CUveiHUH4COPJa9J8SxD3f1-jgQMwaIES7dLhCrS_kXQvQ4/pub?embedded=true"></iframe>
 
     <h1>Conclusion</h1>
 
-    <p><em>Short summary of work completed and areas for improvement/future-work.</em></p>
-    
-    <p><em>Expectation: Meaningfully wraps up project and has good future directions.</em></p>
+    <p>Right now, we have a majority of our visualizations completed and have written the code required for transitioning between each stage in our visualization. There are two animated visualizations, a Sankey diagram and a world map, that are incomplete because of confusion around using animated particles in d3. Additionally, we would like the styling to be consistent across all our visualizations and may add paragraphs in-between certain stages to help contextualize the visualization and give more information about SHF.</p>
 
-    
+
     <h1>Acknowledgments</h1>
 
     <p><em>List here where any code, packages/libraries, text, images, designs, etc. that you leverage come from.</em></p>
-    
+
     <ul>
       <li><a href="https://d3js.org/">D3: Data-Driven Documents</a> by Mike Bostock.</li>
       <li><a href="https://codepo8.github.io/css-fork-on-github-ribbon/#">Pure CSS responsive "Fork me on GitHub" ribbon</a> by Chris Heilmann.</li>
     </ul>
-    
+
   </div>
-  
+
   <!-- Scripts at the end avoid need for dealing with async, defer, or onload event handlers -->
   <script src="lib/d3.v4/d3.v4.js"></script>
   <script src="js/visualization.js"></script>
   <script src="js/bar.js"></script>
   <script src="js/tree.js"></script>
-  
+
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
   <script src="https://d3js.org/topojson.v1.min.js"></script>
