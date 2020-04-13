@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scrolling Vis</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+
+<div>
+  <p>TO DO: Add x axis and values, fix data values to be GDP PPP instead of GDP per capita, embed map as step of scroll instead of below and brush
+    </p>
+</div>
+<div class="container">
+  <div id='graphic'>
+    <div id='sections'>
+      <section class="step">
+        <div class="title">Comparing GDP</div>
+        Gross domestic product (GDP) is a measure of the market value
+        of goods and services produced by a region in a year. <br/><br>
+        This graph shows the GDP per capita at purchasing power parity (PPP) 
+        which is useful when comparing living standards between nations. 
+      </section>
+
+      <section class="step">
+        <div class="title">Jakarta's GDP PPP is $57,906</div>
+        Jakarta is Indonesia's largest city and is the capital of the country.
+        It boasts a booming economy supported by finance and manufacturing. 
+      </section>
+
+      <section class="step">
+        <div class="title">Indonesia as a whole</div>
+        While the city thrives, its GDP is over four times the national average.
+        The country's average GDP is $13,320. 
+      </section>
+      
+      <section class="step">
+        <div class="title">Sumba</div>
+        Sumba is an island in the West Nusa Tenggara region. It's GDP PPP
+        is $5,761, less than half the country's average. Moreover, this is 
+        adjusted for cost of living. The per capita GDP is $1,650.
+      </section>
+
+      <section class="step">
+        <div class="title">Mapping Indonesia's economy</div>
+        Use the map to compare Sumba to other parts of Indonesia.
+      </section>
+     
+    </div>
+    <div id='vis'>
+    </div>
+    <div id="indo-map-container">
+        <div id="info">
+            <div id="info-location">INDONESIA</div>
+            <div id="info-details">Human Development Index (Average): </div>
+          </div>
+        <div id="indo-map"></div>
+</div>
+  </div>
+</div>
+
+
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="js/indo-map.js"></script>
+<script src="js/scroller.js"></script>
+<script src="js/sections.js"></script>
+</body>
+</html>
