@@ -95,7 +95,7 @@ var scrollVis = function () {
     g.selectAll('.image')
       .data(countries)
       .enter().append('image')
-      .attr("xlink:href", function(d) { return d.flag; } )
+      .attr("xlink:href", function(d) { return '/SHF_INDO' + d.flag; } )
       //.attr("x", function(d) { return margin.left + 7; })
       .attr("x", function(d) { return margin.left + x(d.gdp) + 7; })
       .attr("y", function(d) { return height - y(d.province); })
