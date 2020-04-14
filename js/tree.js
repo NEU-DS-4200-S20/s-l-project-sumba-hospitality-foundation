@@ -1,3 +1,32 @@
+function wordWrap(str, maxWidth) {
+  var newLineStr = "\n"; done = false; res = '';
+  while (str.length > maxWidth) {                 
+      found = false;
+      // Inserts new line at first whitespace of the line
+      for (i = maxWidth - 1; i >= 0; i--) {
+          if (testWhite(str.charAt(i))) {
+              res = res + [str.slice(0, i), newLineStr].join('');
+              str = str.slice(i + 1);
+              found = true;
+              break;
+          }
+      }
+      // Inserts new line at maxWidth position, the word is too long to wrap
+      if (!found) {
+          res += [str.slice(0, maxWidth), newLineStr].join('');
+          str = str.slice(maxWidth);
+      }
+
+  }
+
+  return res + str;
+}
+
+function testWhite(x) {
+  var white = new RegExp(/^\s$/);
+  return white.test(x.charAt(0));
+};
+
 var treeData = {
   name: "SHF",
   value: 75,
@@ -109,7 +138,7 @@ var treeData = {
 
 // Set the dimensions and margins of the diagram
 var margin = { top: 20, right: 150, bottom: 30, left: 90 },
-  width = 960 - margin.left - margin.right,
+  width = 900 - margin.left - margin.right,
   height = 500 - margin.top - margin.bottom;
 
 var colorScale = d3.scaleLinear().domain([0, 1]).range(["red", "green"]);
@@ -210,9 +239,11 @@ function update(source) {
     .attr("text-anchor", function (d) {
       return d.children || d._children ? "end" : "start";
     })
-    .html(function (d) {
+    .text(function (d) {
       if (d.data.name != null) {
-        return d.data.name;
+       // console.log(wordWrap(d.data.name, 40))
+       // return wordWrap(d.data.name, 40);
+       return d.data.name
       }
     })
     .style("fill", function (d) {
@@ -230,7 +261,7 @@ function update(source) {
     .attr("x", 15)
     .attr("y", 5)
     .style("fill", "black")
-    .style("font-size", "18px")
+    .style("font-size", "10px")
     .text(function (d) {
       if (d.data.link != null) {
         return "link";
