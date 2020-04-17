@@ -137,7 +137,7 @@ var treeData = {
 
 // Set the dimensions and margins of the diagram
 var margin = { top: 20, right: 150, bottom: 30, left: 90 },
-  width = 900 - margin.left - margin.right,
+  width = 1500 - margin.left - margin.right,
   height = 500 - margin.top - margin.bottom;
 
 var colorScale = d3.scaleLinear().domain([0, 1]).range(["red", "green"]);
