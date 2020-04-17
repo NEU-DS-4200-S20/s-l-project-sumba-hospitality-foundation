@@ -38,7 +38,7 @@ canvas {
 </head>
 <body>
 <canvas width="1000" height="1000" ></canvas>
-<svg width="1000" height="1000" ></svg>
+<svg width="1000" height="1500" ></svg>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.8.0/d3.js" charset="utf-8" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-sankey/0.4.2/d3-sankey.js" charset="utf-8" type="text/javascript"></script>
@@ -47,12 +47,12 @@ canvas {
 
     <script type="text/javascript">
 
-var margin = {top: 1, right: 1, bottom: 6, left: 1},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+var margin = {top: 70, right: 1, bottom: 1, left: 1},
+    width = 1000 - margin.left - margin.right,
+    height = 600 - margin.top - margin.bottom;
 
 var formatNumber = d3.format(",.0f"),
-    format = function(d) { return formatNumber(d) + " TWh"; },
+    format = function(d) { return formatNumber(d)},
     color = d3.scaleOrdinal(d3.schemeCategory20);
 
 var svg = d3.select("svg")
@@ -60,6 +60,20 @@ var svg = d3.select("svg")
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    svg.append("text")
+            .attr("x", (width / 2))
+            .attr("y", -25)
+            .attr("text-anchor", "middle")
+            .style("font-size", "50px")
+            .style("text-decoration", "underline")
+            .text("20,000,00 RP");
+    svg.append("text")
+            .attr("x", (width / 2))
+            .attr("y", 0)
+            .attr("text-anchor", "middle")
+            .style("font-size", "20px")
+            .text("How Families of Sumba Alumni Spend Extra Money");
 
 var sankey = d3.sankey()
     .nodeWidth(15)
@@ -69,6 +83,7 @@ var sankey = d3.sankey()
 var path = sankey.link();
 
 var freqCounter = 1;
+
 
 d3.json("sankey_data.json", function(go) {
 
@@ -163,18 +178,10 @@ d3.json("sankey_data.json", function(go) {
         var currentPos = particles[x].path.getPointAtLength(particles[x].current);
         context.beginPath();
       context.fillStyle = particles[x].link.particleColor(0);
-        context.arc(currentPos.x,currentPos.y + particles[x].offset,particles[x].link.particleSize,0,2*Math.PI);
+        context.arc(currentPos.x,currentPos.y + particles[x].offset + margin.top ,particles[x].link.particleSize,0,2*Math.PI);
         context.fill();
     }
   }
-
-  svg.append("text")
-          .attr("x", (width / 2))
-          .attr("y", 0 - (margin.top / 2))
-          .attr("text-anchor", "middle")
-          .style("font-size", "50px")
-          .style("text-decoration", "underline")
-          .text("2,000,00 RP");
 
 });
 
