@@ -1,22 +1,23 @@
 function wordWrap(str, maxWidth) {
-  var newLineStr = "\n"; done = false; res = '';
-  while (str.length > maxWidth) {                 
-      found = false;
-      // Inserts new line at first whitespace of the line
-      for (i = maxWidth - 1; i >= 0; i--) {
-          if (testWhite(str.charAt(i))) {
-              res = res + [str.slice(0, i), newLineStr].join('');
-              str = str.slice(i + 1);
-              found = true;
-              break;
-          }
+  var newLineStr = "\n";
+  done = false;
+  res = "";
+  while (str.length > maxWidth) {
+    found = false;
+    // Inserts new line at first whitespace of the line
+    for (i = maxWidth - 1; i >= 0; i--) {
+      if (testWhite(str.charAt(i))) {
+        res = res + [str.slice(0, i), newLineStr].join("");
+        str = str.slice(i + 1);
+        found = true;
+        break;
       }
-      // Inserts new line at maxWidth position, the word is too long to wrap
-      if (!found) {
-          res += [str.slice(0, maxWidth), newLineStr].join('');
-          str = str.slice(maxWidth);
-      }
-
+    }
+    // Inserts new line at maxWidth position, the word is too long to wrap
+    if (!found) {
+      res += [str.slice(0, maxWidth), newLineStr].join("");
+      str = str.slice(maxWidth);
+    }
   }
 
   return res + str;
@@ -25,7 +26,7 @@ function wordWrap(str, maxWidth) {
 function testWhite(x) {
   var white = new RegExp(/^\s$/);
   return white.test(x.charAt(0));
-};
+}
 
 var treeData = {
   name: "SHF",
@@ -44,8 +45,7 @@ var treeData = {
       level: "green",
       male: 23,
       female: 17,
-      img:
-        "http://www.sumbahospitalityfoundation.org/wp-content/uploads/2016/10/Classroom.jpg",
+      img: "http://www.sumbahospitalityfoundation.org/wp-content/uploads/2016/10/Classroom.jpg",
       children: [
         {
           name: `Our campus is built entirely from bamboo and encompasses full boarding
@@ -78,8 +78,7 @@ var treeData = {
       level: "green",
       male: 23,
       female: 17,
-      img:
-        "http://www.sumbahospitalityfoundation.org/wp-content/uploads/2016/10/Farm.jpg",
+      img: "http://www.sumbahospitalityfoundation.org/wp-content/uploads/2016/10/Farm.jpg",
       children: [
         {
           name:
@@ -241,9 +240,9 @@ function update(source) {
     })
     .text(function (d) {
       if (d.data.name != null) {
-       // console.log(wordWrap(d.data.name, 40))
-       // return wordWrap(d.data.name, 40);
-       return d.data.name
+        // console.log(wordWrap(d.data.name, 40))
+        // return wordWrap(d.data.name, 40);
+        return d.data.name;
       }
     })
     .style("fill", function (d) {
