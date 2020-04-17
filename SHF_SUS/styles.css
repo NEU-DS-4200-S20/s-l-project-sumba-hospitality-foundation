@@ -1,0 +1,9 @@
+.path {
+  fill: none !important;
+  stroke: #ccc !important;
+}
+
+.svg {
+  width: 100%;
+  height: 100%;
+}
