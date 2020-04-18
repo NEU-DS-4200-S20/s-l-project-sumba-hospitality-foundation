@@ -1,10 +1,9 @@
 /* General formatting */
 body {
   padding: 0 10px;
-  font: 18px/1.5 -apple-system, BlinkMacSystemFont, "avenir next", avenir,
-    "Segoe UI", "lucida grande", "helvetica neue", helvetica, "Fira Sans",
-    roboto, noto, "Droid Sans", cantarell, oxygen, ubuntu,
-    "franklin gothic medium", "century gothic", "Liberation Sans", sans-serif;
+  font: 18px/1.5 -apple-system, BlinkMacSystemFont, "avenir next", avenir, "Segoe UI",
+    "lucida grande", "helvetica neue", helvetica, "Fira Sans", roboto, noto, "Droid Sans", cantarell,
+    oxygen, ubuntu, "franklin gothic medium", "century gothic", "Liberation Sans", sans-serif;
 }
 
 h1,
@@ -23,6 +22,7 @@ h3 {
 .vis-holder {
   width: 100%;
   height: 100%;
+  text-align: center;
 }
 
 /* Fork on GitHub ribbon via https://codepo8.github.io/css-fork-on-github-ribbon/# */
@@ -83,8 +83,6 @@ h3 {
   }
 }
 
-
-
 #subunits {
 }
 
@@ -92,7 +90,7 @@ h3 {
   fill: orange;
 }
 
-path {
+.path {
   stroke: #ffffff;
   /*stroke-width: 0.25px;
   fill: #ffffff;*/
@@ -222,7 +220,6 @@ circle {
   display: inline-block;
 }
 
-
 .container {
   width: 890px;
 }
@@ -230,7 +227,6 @@ circle {
 #graphic {
   padding-top: 60px;
 }
-
 
 #bar-container {
   margin-left: 20%;

@@ -162,7 +162,7 @@ var code_tocount = {}
   }
 
 //color options of the chloropleth
-var color_options = ['#abef95',"#8ae971", "#1fdb02","#268c16"];
+var color_options = ['#99ff99',"#00e500", "#009900","#003300"];
 
 //color the country based on its number of guests
 function colorCountry(country) {
@@ -190,7 +190,7 @@ function colorCountry(country) {
     }
   }
   else {
-      return '#c88925';
+      return '#e5ffe5';
   }
 
 };
