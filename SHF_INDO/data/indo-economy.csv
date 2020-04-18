@@ -1,6 +1,6 @@
 province,gdp,flag,country
 United States,67426,/static/flag_svgs/united states.png,United States
-Jakarta,57906,/static/flag_svgs/Jakarta.png,Indonesia
+Jakarta,57906,/static/flag_svgs/jakarta.png,Indonesia
 Australia,54799,/static/flag_svgs/australia.png,Australia
 France,48640,/static/flag_svgs/France.png,France
 United Kingdom,48160,/static/flag_svgs/united kingdom.png,United Kingdom
@@ -21,7 +21,7 @@ Central Java,8578,/static/flag_svgs/Central Java.png,Indonesia
 Riau Islands,8187,/static/flag_svgs/Riau Islands.png,Indonesia
 Bengkulu,7889,/static/flag_svgs/Bengkulu.png,Indonesia
 Gorontalo,7423,/static/flag_svgs/Gorontalo.png,Indonesia
-Pakistan,6016,/static/flag_svgs/Pakistan.png,Pakistan
+Pakistan,6016,/static/flag_svgs/pakistan.png,Pakistan
 West Nusa,5761,/static/flag_svgs/West Nusa Tenggara.png,Indonesia
 Maluku,5661,/static/flag_svgs/Maluku.png,Indonesia
 East Nusa,4301,/static/flag_svgs/East Nusa Tenggara.png,Indonesia
