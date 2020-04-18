@@ -1,30 +1,29 @@
 province,gdp,flag,country
-United States,65111,/static/flag_svgs/United States.png,United States
-Australia,53825,/static/flag_svgs/Australia.png,Australia
-France,41760,/static/flag_svgs/France.png,France
-United Kingdom,41030,/static/flag_svgs/United Kingdom.png,United Kingdom
-Jakarta,16682,/static/flag_svgs/Jakarta.png,Indonesia
-Panama,16245,/static/flag_svgs/Panama.png,Panama
-East Kalimantan,10890,/static/flag_svgs/East Kalimantan.png,Indonesia
-North Kalimantan,8140,/static/flag_svgs/North Kalimantan.png,Indonesia
-Riau Islands,7590,/static/flag_svgs/Riau Islands.png,Indonesia
-Riau,6742,/static/flag_svgs/Riau.png,Indonesia
-West Papua,5449,/static/flag_svgs/West Papua.png,Indonesia
-Indonesia,3718,/static/flag_svgs/Indonesia.png,Indonesia (country)
-Bolivia,3670,/static/flag_svgs/Bolivia.png,Bolivia
-Jambi,3724,/static/flag_svgs/Jambi.png,Indonesia
-East Java,3673,/static/flag_svgs/East Java.png,Indonesia
-Bali,3611,/static/flag_svgs/Bali.png,Indonesia
-Papua,3480,/static/flag_svgs/Papua.png,Indonesia
-Sumatra,3413,/static/flag_svgs/Sumatra.png,Indonesia
-Sulawesi,3378,/static/flag_svgs/Sulawesi.png,Indonesia
-Banten,3189,/static/flag_svgs/Banten.png,Indonesia
-West Java,2671,/static/flag_svgs/West Java.png,Indonesia
-Lampung,2647,/static/flag_svgs/Lampung.png,Indonesia
-Central Java,2433,/static/flag_svgs/Central Java.png,Indonesia
-Bengkulu,2245,/static/flag_svgs/Bengkulu.png,Indonesia
-Gorontalo,2121,/static/flag_svgs/Gorontalo.png,Indonesia
-Maluku,1590,/static/flag_svgs/Maluku.png,Indonesia
-West Nusa Tenggara,1422,/static/flag_svgs/West Nusa Tenggara.png,West Nusa Tenggara
-Pakistan,1388,/static/flag_svgs/Pakistan.png,Pakistan
-East Nusa Tenggara,1214,/static/flag_svgs/East Nusa Tenggara.png,Indonesia
+United States,67426,/static/flag_svgs/United States.png,United States
+Jakarta,57906,/static/flag_svgs/Jakarta.png,Indonesia
+Australia,54799,/static/flag_svgs/Australia.png,Australia
+France,48640,/static/flag_svgs/France.png,France
+United Kingdom,48160,/static/flag_svgs/United Kingdom.png,United Kingdom
+New Zealand,42045,/static/flag_svgs/New Zealand.png,New Zealand
+Riau,25845,/static/flag_svgs/Riau.png,Indonesia
+Papua,14786,/static/flag_svgs/Papua.png,Indonesia
+Jambi,13611,/static/flag_svgs/Jambi.png,Indonesia
+Indonesia,13230,/static/flag_svgs/Indonesia.png,Indonesia (country)
+East Java,12928,/static/flag_svgs/East Java.png,Indonesia
+Bali,12737,/static/flag_svgs/Bali.png,Indonesia
+East Kalimantan,12281,/static/flag_svgs/East Kalimantan.png,Indonesia
+North Sumatra,11990,/static/flag_svgs/North Sumatra.png,Indonesia
+Banten,11300,/static/flag_svgs/Banten.png,Indonesia
+Sulawesi,10378,/static/flag_svgs/Southeast Sulawesi.png,Indonesia
+West Sumatra,9989,/static/flag_svgs/West Sumatra.png,Indonesia
+West Java,9399,/static/flag_svgs/West Java.png,Indonesia
+Lampung,9297,/static/flag_svgs/Lampung.png,Indonesia
+West Kalimantan,9046,/static/flag_svgs/West Kalimantan.png,Indonesia
+Central Java,8578,/static/flag_svgs/Central Java.png,Indonesia
+Riau Islands,8187,/static/flag_svgs/Riau Islands.png,Indonesia
+Bengkulu,7889,/static/flag_svgs/Bengkulu.png,Indonesia
+Gorontalo,7423,/static/flag_svgs/Gorontalo.png,Indonesia
+Pakistan,6016,/static/flag_svgs/Pakistan.png,Pakistan
+West Nusa,5761,/static/flag_svgs/West Nusa Tenggara.png,Indonesia
+Maluku,5661,/static/flag_svgs/Maluku.png,Indonesia
+East Nusa,4301,/static/flag_svgs/East Nusa Tenggara.png,Indonesia

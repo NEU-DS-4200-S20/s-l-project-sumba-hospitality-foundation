@@ -1,3 +1,5 @@
+/* adopted from: https://github.com/vlandham/scroll_demo */
+
 /**
  * scroller - handles the details
  * of figuring out which section

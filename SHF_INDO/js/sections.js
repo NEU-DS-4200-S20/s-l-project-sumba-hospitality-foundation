@@ -6,7 +6,7 @@ var scrollVis = function () {
   // constants to define the size and margins of the vis area.
   var width = window.innerWidth * .85;
   var height = window.innerHeight * .85;
-  var margin = { top: 0, left: 75, bottom: 40, right: 10 };
+  var margin = { top: 0, left: 60, bottom: 40, right: 10 };
 
   // Keep track of which visualization we are on and which was the last
   // index activated. When user scrolls quickly, we want to call all the
@@ -30,6 +30,10 @@ var scrollVis = function () {
   var x = d3.scaleLinear()
     .range([0, width * .65]);
 
+  // Define the div for the tooltip
+  var div = d3.select("body").append("div")	
+    .attr("class", "tooltip")				
+    .style("opacity", 0);
 
   
 
@@ -47,7 +51,6 @@ var scrollVis = function () {
    */
   var chart = function (selection) {
     selection.each(function (countries) {
-      console.log(countries)
       svg = d3.select(this).selectAll('svg').data([countries]);
       var svgE = svg.enter().append('svg');
       svg = svg.merge(svgE);
@@ -96,22 +99,12 @@ var scrollVis = function () {
       .data(countries)
       .enter().append('image')
       .attr("xlink:href", function(d) { return '/s-l-project-sumba-hospitality-foundation/SHF_INDO' + d.flag; } )
-      //.attr("x", function(d) { return margin.left + 7; })
       .attr("x", function(d) { return margin.left + x(d.gdp) + 7; })
       .attr("y", function(d) { return height - y(d.province); })
       .attr("width", 25)
       .attr("height", y.bandwidth())
 
-    // // animate
-    // g.selectAll('image')
-    //   .transition()
-    //   .duration(2500)
-    //   .attr("x", function(d) { return margin.left + x(d.gdp) + 7; })
-    //   .delay(function(d,i){ return(i*50)});
-
-    // bars on chart
-    
-    //svg_chart.selectAll(".bar")
+    // gdp bars
     g.selectAll('.bar')
       .data(countries)
       .enter().append("rect")
@@ -122,29 +115,26 @@ var scrollVis = function () {
       .attr("height", y.bandwidth())
       .attr("width", function(d) { 
         return x(d.gdp); })
-      .attr("fill", "#58508d")
+      .attr("fill", "#6a90c0")
       .on('mouseover', function(d) {
         let province = d3.select(this);
-        province.attr("fill", "#ffa600");
+        province.attr("fill", "#bc435a");
+        div.transition()		
+                .duration(200)		
+                .style("opacity", .9);
+        div.html("$" + d.gdp)	
+                .style("left", (d3.event.pageX) + "px")		
+                .style("top", (d3.event.pageY - 15) + "px");
       })
       .on('mouseout', function(d) {
         let province = d3.select(this);
-        province.attr("fill", "#58508d")
+        province.attr("fill", "#6a90c0");
+        div.transition()		
+                .duration(500)		
+                .style("opacity", 0);	
       });
 
-    // animate
-    //svg_chart.selectAll("rect")
-    // g.selectAll("rect")
-    //   .data(countries)
-    //   .transition()
-    //   .duration(2500)
-    //   .attr("width", function(countries) { 
-    //     return x(countries.gdp); })
-    //   .delay(function(d,i){ return(i*50)});
-
-
     // country names
-    //svg_chart.selectAll("g")
     g.selectAll('text')
       .data(countries)
       .enter().append("text")
@@ -156,6 +146,8 @@ var scrollVis = function () {
       .attr("fill", "black")
       .attr("text-anchor", "end")
       .text( function(d) { return d.province; })
+    
+     
 
   };
 
@@ -195,32 +187,22 @@ var scrollVis = function () {
      * user may be scrolling up or down).
      *
     */
-  let fillFunction = function(d, province) {
-    console.log(province)
-    if (d.province === province) {
-      return "#ff6361"
-    }
-    else {
-      return "#58508d"
-    }
-  }
 
   function showGraph() {
     g.selectAll('.bar')
       .transition()
       .duration(0)
-      .attr('fill', "#58508d")
+      .attr('fill', "#6a90c0")
       .attr('opacity', 100);
   }
   function showJakarta() {
-   // let fillFunction = 
     g.selectAll('.bar')
       .attr('fill', function(d) {
         if (d.province === "Jakarta") {
-          return "#ff6361"
+          return "#bc435a"
         }
         else {
-          return "#58508d"
+          return "#6a90c0"
         }
       })
       .attr('opacity', function(d) {
@@ -236,10 +218,10 @@ var scrollVis = function () {
     g.selectAll('.bar')
     .attr('fill', function(d) {
       if (d.province === "Indonesia") {
-        return "#ff6361"
+        return "#bc435a"
       }
       else {
-        return "#58508d"
+        return "#6a90c0"
       }
     })
     .attr('opacity', function(d) {
@@ -255,10 +237,10 @@ var scrollVis = function () {
     g.selectAll('.bar')
     .attr('fill', function(d) {
       if (d.province === "West Nusa Tenggara") {
-        return "#ff6361"
+        return "#bc435a"
       }
       else {
-        return "#58508d"
+        return "#6a90c0"
       }
     })
     .attr('opacity', function(d) {
@@ -273,7 +255,7 @@ var scrollVis = function () {
 
   function showMap() {
     g.selectAll('.bar')
-    .attr('fill',"#58508d")
+    .attr('fill',"#6a90c0")
     .attr('opacity', 1);
   }
 
@@ -318,7 +300,6 @@ var scrollVis = function () {
  * @param data - loaded tsv data
  */
 function display(data) {
-  console.log(data)
   // create a new plot and
   // display it
   var plot = scrollVis();
