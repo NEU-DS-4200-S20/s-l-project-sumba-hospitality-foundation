@@ -98,7 +98,7 @@ var scrollVis = function () {
     g.selectAll('.image')
       .data(countries)
       .enter().append('image')
-      .attr("xlink:href", function(d) { return '/s-l-project-sumba-hospitality-foundation/SHF_INDO' + d.flag; } )
+      .attr("xlink:href", function(d) { return "/SHF_INDO" + d.flag; } )
       .attr("x", function(d) { return margin.left + x(d.gdp) + 7; })
       .attr("y", function(d) { return height - y(d.province); })
       .attr("width", 25)
